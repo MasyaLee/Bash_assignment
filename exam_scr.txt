@@ -1,0 +1,27 @@
+#!/bin/bash
+
+. /home/max/exam/function.sh
+
+echo $checkpy
+if [ $? -eq 0 ];
+then
+       sh rminstpy.sh
+else
+       sh instpy.sh
+fi
+
+echo $checkjre
+if [ $? -eq 0 ];
+then
+       sh rminstjava.sh
+else
+       sh instjava.sh
+fi
+
+if [ $? -eq 0 ];
+then
+        echo $whatdir
+        echo 'Python was installed'
+		echo $whatdirjre
+		echo 'Java was installed'
+fi

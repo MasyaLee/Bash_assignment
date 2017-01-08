@@ -1,0 +1,10 @@
+#!/bin/bash
+
+checkpy=$(which python)
+checkjre=$(which java)
+
+sitepy=$(echo 'https://www.python.org/ftp/python/2.7.12/Python-2.7.12rc1.tgz')
+sitejre=$(echo 'http://javadl.oracle.com/webapps/download/AutoDL?BundleId=211989')
+
+whatdir=$(echo 'Python-2.7.12rc1')
+whatdirjre=$(echo 'jre1.8.0_101')

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+. /home/max/exam/function.sh
+
+pkill -9 java
+rm -f $(which java)
+wget $sitejre -O ./JRE
+tar -xvf JRE
+rm -rf ./JRE
+cd /home/max/exam/$whatdirjre
+alternatives --install /usr/bin/java java /home/max/exam/$whatdirjre/bin/java 2
+alternatives --config java

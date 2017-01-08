@@ -1,0 +1,13 @@
+#!/bin/bash
+
+. /home/max/exam/function.sh
+
+pkill -9 python
+yum remove python
+wget $sitepy -O ./python
+tar -xvf python
+rm -rf ./python
+cd /home/max/exam/$whatdir
+./configure
+make altinstall
+
